@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Schedule App</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+</head>
+
+<body>
+<header>
+	<h1>Interdimensional Train Travel</h1>
+</header>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Train Schedules</div>
+	<table class="table-responsive table">
+		<thead>
+	    <tr>
+	      <th>Train</th>
+	      <th>Destination</th>
+	      <th class='text-center'>Frequency in Earth Minutes</th>
+	      <th class='text-center'>Next Arrival Time</th>
+	      <th class='text-center'>Minutes Until Next Train</th>
+	      <th class='text-center'>X</th>
+	    </tr>
+		</thead>
+		<tbody id="table-body"></tbody>
+	</table>
+</div>
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">Add Your Interdimensional Train</div>
+	<form>
+		<div class="form-group">
+		    <label for="train-name">Train Name {ex. the 5th dimension} </label>
+		    <input type="text" class="form-control" id="train-name">
+  		</div>
+ 		<div class="form-group">
+		    <label for="destination">Destination {ex. the 11th dimension (potentially theoretical)} </label>
+		    <input type="text" class="form-control" id="destination">
+  		</div>
+  		<div class="form-group">
+		    <label for="first-train">First Train Time (HH:mm - military time)</label>
+		    <input type="text" class="form-control" id="first-train">
+  		</div>
+  		<div class="form-group">
+		    <label for="frequency">Frequency (min)</label>
+		    <input type="text" class="form-control" id="frequency">
+  		</div>
+  		<button type="submit" id="submit-button" class="btn btn-default">Submit New Train</button>
+	</form>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
