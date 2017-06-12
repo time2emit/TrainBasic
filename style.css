@@ -1,0 +1,16 @@
+* {
+	margin: 5px;
+}
+
+body {
+	background-color:lavender;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+}
+
+.panel {
+	background-color: turquoise;
+}
