@@ -33,6 +33,53 @@ $("#submit-button").on("click", function(event) {
   });
 });
 
+// Retrieve user input from firebase
+  database.ref().on("child_added", function(snapshot) {
+    var trainName = snapshot.val().trainName;
+    var destination = snapshot.val().destination;
+    var firstTrain = snapshot.val().firstTrain;
+    var frequency = snapshot.val().frequency;
+    var nextArrival = "Soon";
+    var minutesLeft = "TBD";
+    var key = snapshot.key;
+
+  
+// Make a row to be appended to the HTML table dynamically
+    var row = $("<tr class='text-center'>");
+    row.attr("key", key);
+    row.append($("<td class='text-center'>").html(trainName));
+    row.append($("<td class='text-center'>").html(destination));
+    row.append($("<td class='text-center'>").html(frequency));
+    row.append($("<td class='text-center'>").html(nextArrival));
+    row.append($("<td class='text-center'>").html(minutesLeft));
+// Remove a train from firebase and the UI with a button
+    button = $("<button>");
+    span = $("<span>");
+    column = $("<td class='text-center'>");
+    button.addClass("remove");
+    button.attr("key", key);
+    span.text("X");
+    button.append(span);
+    column.append(button);
+    row.append(column);
+
+
+// Actually append row to the HTML
+    $("#table-body").append(row);
+
+    });
+
+// When the X is clicked, delete data from firebase and remove row in UI
+  $("body").on("click", ".remove", function(){
+    database.ref().child($(this).attr(key)).remove();
+  });
+
+  database.ref().on("child_removed", function(snapshot) {
+    var key = snapshot.key;
+    $("#"+key).remove();
+  })
+  
+
 
 
 
