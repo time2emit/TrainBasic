@@ -58,13 +58,14 @@ $("#submit-button").on("click", function(event) {
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
       console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+    var showNextTrain = moment(nextTrain).format("hh:mm");
 
 // Make a row to be appended to the HTML table dynamically
     var row = $("<tr class='text-center'>");
     row.append($("<td class='text-center'>").html(trainName));
     row.append($("<td class='text-center'>").html(destination));
     row.append($("<td class='text-center'>").html(frequency));
-    row.append($("<td class='text-center'>").html(nextTrain));
+    row.append($("<td class='text-center'>").html(showNextTrain));
     row.append($("<td class='text-center'>").html(tMinutesTillTrain));
 
 

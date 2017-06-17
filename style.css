@@ -1,21 +1,19 @@
 * {
 	margin: 5px;
+	color:white;
 }
 
 body {
-	background-color:gold;
+	background-image: url(trippy.jpg);
 }
 
 h1 {
 	text-align: center;
-	color: green;
+	color: darkorange;
+	text-decoration:overline;
+	font-weight:bold;
 }
 
 .panel {
-	background-color: darkorange;
-}
-
-.panel-heading {
-	background-color: purple;
-	color:pink;
+	background-color: black;
 }
