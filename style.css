@@ -3,14 +3,19 @@
 }
 
 body {
-	background-color:lavender;
+	background-color:gold;
 }
 
 h1 {
 	text-align: center;
-	color: black;
+	color: green;
 }
 
 .panel {
-	background-color: turquoise;
+	background-color: darkorange;
+}
+
+.panel-heading {
+	background-color: purple;
+	color:pink;
 }

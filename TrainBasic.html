@@ -2,39 +2,40 @@
 <html>
 <head>
 	<title>Train Schedule App</title>
-
+<!-- Bootstrap CDN-->	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<!-- CSS file -->
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+<!-- Firebase CDN-->	
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-
+<!-- Moment CDN-->	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 </head>
 
 <body>
-<header>
-	<h1>Interdimensional Train Travel</h1>
+<!-- Page Title -->
+ <header>
+	<h1>Hippie Interdimensional Train Travel</h1>
 </header>
-
+<!-- Div where schedules will be posted (first major container) -->
 <div class="panel panel-default">
 	<div class="panel-heading">Train Schedules</div>
 	<table class="table-responsive table">
 		<thead>
 	    <tr>
+	    <!-- Columns of table -->
 	      <th class='text-center'>Train</th>
 	      <th class='text-center'>Destination</th>
 	      <th class='text-center'>Frequency in Earth Minutes</th>
 	      <th class='text-center'>Next Arrival Time</th>
 	      <th class='text-center'>Minutes Until Next Train</th>
-	      <th class='text-center'>Remove Train</th>
 	    </tr>
 		</thead>
 		<tbody id="table-body"></tbody>
 	</table>
 </div>
 
-
+<!-- Form where you enter a new train schedule (second major container) -->
 <div class="panel panel-default">
 	<div class="panel-heading">Add Your Interdimensional Train</div>
 	<form>
@@ -58,10 +59,9 @@
 	</form>
 </div>
 
-
-
-
+<!-- Ajax -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Javacript file linked -->
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
